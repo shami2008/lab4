@@ -2,24 +2,24 @@
 #include <locale.h>
 
 int main() {
-    setlocale (LC_ALL, "Russian");
+    setlocale (LC_ALL, "Russian");//локализация
     double a, b, c;
-    std::cout <<"������� ������ �����:";
+    std::cout <<"введите первое число:";
     std::cin>>a;
-    std::cout <<"������� ������ �����:";
+    std::cout <<"введите второе число:";
     std::cin>>b;
-    std::cout <<"������� ������ �����:";
+    std::cout <<"введите третье число:";
     std::cin>>c ;
 
     double maximum;
-    if (a>= b && b>=c) {
+    if (a>= b && b>=c) {//если а>b , a b>c ,то а--максимум
         maximum = a;
-    } else  if (b>=a && b>= c){
+    } else  if (b>=a && b>= c){//если b>a , a a>c ,то b--максимум
         maximum = b;
-    }else {
+    }else {//если c>a , a a>b ,то c--максимум
         maximum = c;
     }
-    std::cout<<"��������:" << maximum << "\n";
+    std::cout<<"максимум:" << maximum << "\n";//вывод максимума
 
     return 0;
 }
